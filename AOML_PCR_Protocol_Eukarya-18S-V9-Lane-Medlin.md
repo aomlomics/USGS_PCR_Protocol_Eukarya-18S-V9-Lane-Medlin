@@ -1,7 +1,7 @@
 ---
 # MIOP terms
 methodology_category: omics analysis
-project: "NOAA Atlantic Oceanographic and Meteorological Laboratory Omics Program; https://github.com/aomlomics/protocols; https://zenodo.org/communities/aomlomics"
+project: "US Geological Survey Mesophotic and Deep Benthic Communities (MDBC) Protocols"
 purpose: PCR [OBI:0000415]
 analyses: PCR [OBI:0000415]
 geographic_location: Atlantic Ocean [GAZ:00000344], Gulf of Mexico [GAZ:00002853]
@@ -39,49 +39,51 @@ pcr_primer_name_forward: 1391F
 pcr_primer_name_reverse: EukBr
 pcr_primer_reference_forward: 10.1371/journal.pone.0006372
 pcr_primer_reference_reverse: 10.1371/journal.pone.0006372
-pcr_primer_vol_forward: 1.0
-pcr_primer_vol_reverse: 1.0
-pcr_primer_conc_forward: 10
-pcr_primer_conc_reverse: 10
+pcr_primer_vol_forward: 2.5
+pcr_primer_vol_reverse: 2.5
+pcr_primer_conc_forward: 1.0
+pcr_primer_conc_reverse: 1.0
 probeReporter: not applicable
 probeQuencher: not applicable
 probe_seq: not applicable
 probe_ref: not applicable
 probe_conc: not applicable
-commercial_mm: AmpliTaq Gold 360 Master Mix
-custom_mm: PCR reactions were run in 25 uL reaction volumes, with 1.0 uL of DNA, 12.5 uL of AmpliTaq Gold, 9.5 uL of water, and 1.0 uL of each primer (10 uM).
-pcr_dna_vol: 1.0
+commercial_mm: Kapa HiFi HotStart ReadyMix
+custom_mm: PCR reactions were run in 13.25 uL reaction volumes, with 2.0 uL of DNA, 6.25 uL of Kapa HiFi HotStart ReadyMix, and 2.5 uL of each primer (1 uM).
+pcr_dna_vol: 2.0
 pcr_rep: 1
 nucl_acid_amp: not provided
-pcr_cond: initial denaturation:95_3;denaturation:95_0.75;annealing:57_1;elongation:72_1.5;final elongation:72_10;35
-annealingTemp: 57
-pcr_cycles: 35
+pcr_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:63_0.5;elongation:72_0.5;final elongation:72_5;5
+annealingTemp: 63
+pcr_cycles: 30
 pcr_analysis_software: not provided
 pcr_method_additional: not provided
 barcoding_pcr_appr: two-step PCR
 pcr2_thermocycler: not provided
-pcr2_amplificationReactionVolume: 15
-pcr2_commercial_mm: 2X Dream Taq Master Mix (K1920)
+pcr2_amplificationReactionVolume: 50
+pcr2_commercial_mm: 2x KAPA HiFi HotStrt Ready Mix
 pcr2_custom_mm: not applicable
-pcr2_dna_vol: 1
-pcr2_cond: initial denaturation:95_3;denaturation:95_0.25;annealing:60_0.5;elongation:72_1.5;final elongation:72_180;11
-pcr2_annealingTemp: 60
-pcr2_cycles: 11
+pcr2_dna_vol: 20
+pcr2_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:55_0.5;elongation:72_0.5;final elongation:72_5;8
+pcr2_annealingTemp: 55
+pcr2_cycles: 8
 pcr2_analysis_software: not applicable
 pcr2_method_additional: not applicable
-sequencing_location: Michigan State University Research Technology Support Facility Genomics Core
+sequencing_location: USGS MDBC
 platform: ILLUMINA
 instrument: Illumina MiSeq [OBI:0002003]
 seq_kit: MiSeq Reagent Kit v2 (300 cycles)
 lib_layout: paired
-adapter_forward: ACACTGACGACATGGTTCTACA
-adapter_reverse: TACGGTAGCAGAGACTTGGTCT
-lib_screen: normalized using Invitrogen SequalPrep
-lib_conc_meth: quantified using Qubit dsDNA HS, Agilent 4200 TapeStation HS DNA1000 and Invitrogen Collibri Library Quantification qPCR
+adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
+adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
+lib_screen: not provided
+lib_conc_meth: not provided
 seq_method_additional: not applicable
 ---
 
-# NOAA/AOML PCR Protocol 18S rRNA V9 (Lane-Medlin)
+# USGS/MDBC PCR Protocol 18S rRNA V9 (Lane-Medlin)
+
+***WARNING: DETAILS BELOW HAVE NOT BEEN UPDATED. PLEASE USE ABOVE VALUES IN YAML FRONT MATTER.***
 
 ## PROTOCOL INFORMATION
 
@@ -100,42 +102,35 @@ seq_method_additional: not applicable
 
 | PREPARED BY | AFFILIATION | ORCID | DATE |
 | ------------- | ------------- | ------------- | ------------- |
-| Luke Thompson |NOAA/AOML, MSU/NGI | <https://orcid.org/0000-0002-3911-1280> | 2021-02-28 |
-| Sean Anderson | NOAA/AOML, MSU/NGI | <https://orcid.org/0000-0003-3096-1120> | 2021-02-28 |
-| Sammy Harding | NOAA/AOML, MSU/NGI | <https://orcid.org/0009-0008-8885-6140> | 2024-08-22 |
+| Cassia Busch | USGS/MDBC | <https://orcid.org/xxxx> | 2024-08-22 |
+| Kara Jones | USGS/MDBC | <https://orcid.org/xxxx> | 2024-08-22 |
+| Alexis Weinnig | NOAA/NMFS | <https://orcid.org/xxxx> | 2024-08-22 |
+| Luke Thompson |NOAA/AOML, MSU/NGI | <https://orcid.org/0000-0002-3911-1280> | 2025-12-15 |
 
 ## RELATED PROTOCOLS
 
 | PROTOCOL NAME | LINK  | VERSION | RELEASE DATE|
 | ------------- | ------------- | ------------- | ------------- |
-| NOAA/AOML Water Sampling Protocol using Sterivex with Zirconia Beads  | <https://github.com/aomlomics/protocols/blob/main/markdown/protocol_sampling_sterivex_beads.md> | 1.2.0 | 2025-01-08 |
-| NOAA/AOML DNA Extraction Protocol for Sterivex using KingFisher | <https://github.com/aomlomics/protocols/blob/main/markdown/protocol_extractdna_sterivex_kingfisher.md> | 1.1.0 | 2024-11-16 |
-| NOAA/AOML PCR Protocol 12S rRNA V5-V6 (MiFish) | <https://github.com/aomlomics/protocols/blob/main/markdown/protocol_pcr_ssu12sv5v6_mifish.md> | 1.1.0 | 2024-11-16 |
-| NOAA/AOML PCR Protocol 16S rRNA V4-V5 (EMP) | <https://github.com/aomlomics/protocols/blob/main/markdown/protocol_pcr_ssu16sv4v5_emp.md> | 1.1.0 | 2024-11-16 |
-| NOAA/AOML Metagenome Library Prep Protocol (Illumina DNA Prep) | <https://github.com/aomlomics/protocols/blob/main/markdown/protocol_libprep_metag_illumina.md> | 1.1.0 | 2024-11-16 |
+| xxx | xxx | xxx | xxx |
 
 ## RELATED EXTERNAL PROTOCOLS
 
 | PROTOCOL NAME | LINK | ISSUER / AUTHOR | ACCESS DATE |
 | ------------ | ------------ | ------------ | ---------- |
-| AMPure XP Bead-Based Reagent Protocol for PCR Purification | https://www.beckman.com/reagents/genomic/cleanup-and-size-selection/pcr/ampure-xp-protocol | Beckman Coulter | 2025-02-05 |
-| Invitrogen Qubit 1X dsDNA HS Assay Kits User Guide | https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0017455_Qubit_1X_dsDNA_HS_Assay_Kit_UG.pdf | ThermoFisher Scientific | 2025-02-05 |
+| xxx | xxx | xxx | xxx |
 
 ### Protocol Revision Record
 
 | VERSION | RELEASE DATE | DESCRIPTION OF REVISIONS |
 | ------------- | ------------- | ------------- |
-| 1.0.0 | 2021-08-22 | Initial release |
-| 1.0.1 | 2024-10-23 | Formatting edits |
-| 1.1.0 | 2024-11-16 | Addition of FAIR eDNA terms in YAML frontmatter |
-| 1.2.0 | 2025-09-18 | Addition of sequencing preparation and Illumina sequencing facility information |
+| 1.0.0 | 2025-12-15 | Initial release |
 
 ### Acronyms and Abbreviations
 
 | ACRONYM / ABBREVIATION | DEFINITION |
 | ------------- | ------------- |
+| USGS | United States Geological Survey |
 | NOAA | National Oceanographic and Atmospheric Administration |
-| AOML | Atlantic Oceanographic and Meteorological Laboratory |
 | MSU | Mississippi State University |
 | NGI | Northern Gulf Institute |
 | PCR | Polymerase chain reaction |
