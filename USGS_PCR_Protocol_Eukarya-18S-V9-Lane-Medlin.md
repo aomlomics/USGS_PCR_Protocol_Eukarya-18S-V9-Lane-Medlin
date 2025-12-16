@@ -124,6 +124,7 @@ seq_method_additional: not applicable
 | VERSION | RELEASE DATE | DESCRIPTION OF REVISIONS |
 | ------------- | ------------- | ------------- |
 | 1.0.0 | 2025-12-15 | Initial release |
+| 1.0.1 | 2025-12-15 | Updated YAML front matter - note that details in main text still reflect AOML parameters and have not been updated |
 
 ### Acronyms and Abbreviations
 
