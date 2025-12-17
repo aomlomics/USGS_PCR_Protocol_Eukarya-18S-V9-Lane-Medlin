@@ -25,14 +25,14 @@ maturity level: mature
 # FAIRe terms
 pcr_0_1: 1
 thermocycler: Eppendorf Mastercycler Nexus Thermal Cycler
-amplificationReactionVolume: 25
+amplificationReactionVolume: 13.25
 assay_name: ssu18sv9
 assay_validation: not provided
 targetTaxonomicAssay: 18S rRNA gene sequencing targeting the V9 region using primers 1391F and EukBr
 targetTaxonomicScope: Eukaryotes, with a focus on microbial eukaryotic lineages
 target_gene: 18S rRNA
 target_subfragment: V9
-ampliconSize: 260
+ampliconSize: 127
 pcr_primer_forward: GTACACACCGCCCGTC
 pcr_primer_reverse: TGATCCTTCTGCAGGTTCACCTAC
 pcr_primer_name_forward: 1391F
@@ -53,9 +53,9 @@ custom_mm: PCR reactions were run in 13.25 uL reaction volumes, with 2.0 uL of D
 pcr_dna_vol: 2.0
 pcr_rep: 1
 nucl_acid_amp: not provided
-pcr_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:63_0.5;elongation:72_0.5;final elongation:72_5;5
+pcr_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:63_0.5;elongation:72_0.5;final elongation:72_5;29
 annealingTemp: 63
-pcr_cycles: 30
+pcr_cycles: 29
 pcr_analysis_software: not provided
 pcr_method_additional: not provided
 barcoding_pcr_appr: two-step PCR
@@ -105,19 +105,20 @@ seq_method_additional: not applicable
 | Cassia Busch | USGS/MDBC | <https://orcid.org/xxxx> | 2024-08-22 |
 | Kara Jones | USGS/MDBC | <https://orcid.org/xxxx> | 2024-08-22 |
 | Alexis Weinnig | NOAA/NMFS | <https://orcid.org/xxxx> | 2024-08-22 |
-| Luke Thompson |NOAA/AOML, MSU/NGI | <https://orcid.org/0000-0002-3911-1280> | 2025-12-15 |
+| Luke Thompson | NOAA/AOML, MSU/NGI | <https://orcid.org/0000-0002-3911-1280> | 2025-12-15 |
+| Sammy Harding | NOAA/AOML, MSU/NGI | <https://orcid.org/0009-0008-8885-6140> | 2025-12-17 |
 
 ## RELATED PROTOCOLS
 
 | PROTOCOL NAME | LINK  | VERSION | RELEASE DATE|
 | ------------- | ------------- | ------------- | ------------- |
-| xxx | xxx | xxx | xxx |
+| Not provided |  |  |  |
 
 ## RELATED EXTERNAL PROTOCOLS
 
 | PROTOCOL NAME | LINK | ISSUER / AUTHOR | ACCESS DATE |
 | ------------ | ------------ | ------------ | ---------- |
-| xxx | xxx | xxx | xxx |
+| Not provided |  |  |  |
 
 ### Protocol Revision Record
 
@@ -125,6 +126,7 @@ seq_method_additional: not applicable
 | ------------- | ------------- | ------------- |
 | 1.0.0 | 2025-12-15 | Initial release |
 | 1.0.1 | 2025-12-15 | Updated YAML front matter - note that details in main text still reflect AOML parameters and have not been updated |
+| 1.0.2 | 2025-12-17 | Updated entire protocol to reflect USGS parameters |
 
 ### Acronyms and Abbreviations
 
@@ -150,11 +152,11 @@ seq_method_additional: not applicable
 
 ### Summary
 
-This protocol describes steps for performing PCR for [18S rRNA](target_gene) [V9](target_subfragment) marker gene regions using eDNA extracted from Sterivex at NOAA's AOML. There are several optional steps towards the end of the protocol including using AMPure beads to clean up PCR products. The PCR protocol only includes a primary PCR step as the secondary PCR, library preparation and Illumina sequencing is completed by Michigan State University's RTSF Genomics Core. Steps related to preparing samples for sequencing and the Genomics Core's procedure are included. Some steps (e.g. PCR plate preparation) have been or can be optimized for use with the Opentrons OT2 robot.
+This protocol describes steps for performing PCR for [18S rRNA](target_gene) [V9](target_subfragment) marker gene regions using eDNA extracted from Sterivex by USGS. The PCR protocol only includes a primary PCR step.
 
 ### Method description and rationale
 
-This protocol is used for PCR amplifying the [18S rRNA](target_gene) [V9](target_subfragment) marker gene regions of environmental DNA. Fluidigm adapters are already present on the primers described in the following protocol. It is highly reproducible and can easily be adapted for any number of samples (i.e. a full 96-well plate or a few samples).
+This protocol is used for PCR amplifying the [18S rRNA](target_gene) [V9](target_subfragment) marker gene regions of environmental DNA. It is highly reproducible and can easily be adapted for any number of samples (i.e. a full 96-well plate or a few samples).
 
 ### Spatial coverage and environment(s) of relevance
 
@@ -189,11 +191,6 @@ For 96-well Plate:
 | 10-100 ul 8-Channel Pipette | Eppendorf Research Plus 8 Channel Pipette | Eppendorf | 1 | Can be substituted with any accurate pipette |
 | 0.5-10 uL 8-Channel Pipette |Eppendorf Research Plus 8 Channel Pipette | Eppendorf | 1 | Can be substituted with any accurate pipette |
 | Thermal cycler | Mastercycler Nexus Thermal Cycler | Eppendorf | 1 | Can be substituted with generic |
-| Microwave | Generic Microwave | Generic Brand | 1 | |
-| Flask | 500 mL Flask | Generic Brand | 1 | Used for mixing agarose gel solution |
-| 1-L Glass Container | 1 L Glass Container | Generic Brand | 1 | Used for storing 1x TBE buffer |
-| Gel Tray & Box | Gel Electrophoresis Box and Tray | Generic Brand | 1 | Can be substituted with generic |
-| Gel Combs | Gel Electrophoresis Combs | Generic Brand | 2 | Can be substituted with generic |
 | **Consumable equipment** |
 | Gloves | Nitrile Gloves, Exam Grade, Powder-free | ULINE | 1 | (box) Can be substituted with generic |
 | Kim Wipes | KimWipe Delicate Task Wipers | KimTech | 1 | (box) Can be substituted with generic |
@@ -202,26 +199,14 @@ For 96-well Plate:
 | 1000µL Filter Tips | OT-2 Filter Tips, 1000µL | Opentrons | 1 | (box) Can be substituted with generic |
 | 200µL Filter Tips | OT-2 Filter Tips, 200µL | Opentrons | 2 | (boxes) Can be substituted with generic |
 | 10 ul Filter tips | TipOne Pipette Tips, 10 uL | TipOne | 2 | (boxes) Can be substituted with generic |
-| AmpliTaq Gold PCR Mix | AmpliTaq Gold DNA Polymerase 5 mL | ThermoFisher | 1.2 | (mL) |
-| Molecular water | Invitrogen RT-PCR Grade Water | Fisher Scientific | 0.912 | (mL) |
+| Kapa HiFi Hotstart ReadyMix | Kapa HiFi Hotstart ReadyMix  | Roche | 0.6 | (mL) |
+| Molecular water | Invitrogen RT-PCR Grade Water | Fisher Scientific | 1 vial | |
 | Forward Primer - 1391F | 18S 1391F Fluidigm Primer | IDT | 105 | (ul (10uM)) Primer must be diluted from 100uM stocks to 10uM |
 | Reverse Primer - EukBR | 18S EukBR Fluidigm Primer | IDT | 105 | (ul (10uM)) Primer must be diluted from 100uM stocks to 10uM |
-| TBE Buffer (10x) | TBE Buffer 10X Solution, Molecular Biology Grade, UltraPure | Thermo Scientific | 100 | (uL) |
-| Agarose | Agarose LE, Molecular Biology Grade, UltraPure | Thermo Scientific | 4 | (g) |
-| SYBR Safe | SYBR Safe DNA Gel Stain | Invitrogen | 20 | (uL) Light sensitive - do not expose to light |
-| Gel stain loading dye | DNA Gel Loading Dye (6x) | Thermo Scientific | 480 | (ul per plate) |
-| 100bp DNA Ladder | Generuler 100 bp DNA Ladder | Thermo Scientific | 6 | (ul per lane on gel) |
-| Parafilm | Parafilm M Lab Film | Generic | 1 | (roll) Can substitute with generic brand |
 | **Chemicals** |
 | RNase AWAY | RNase AWAY Surface Decontaminant | ThermoFisher Scientific | 1 | (bottle) Used to sterilize lab surfaces and equipment |
 | EtOH | Ethanol | Generic Brand | 1 | (wash bottle) Must be molecular grade ethanol |
 | DI water | Deionized water | Generic | 900 | (mL) |
-| (OPTIONAL) Clean-Up Protocol |
-| AMPure XP Beads | AMPure XP Bead-Based Reagent | Beckman Coulter | 1 | (kit) |
-| 96-well magnetic plate | MagDTR 96-Well Magnetic Separator | Edge Biosystems Inc | 1 | Can be substituted with generic brand |
-| **(OPTIONAL) Qubit** |
-| Qubit Reagents | Qubit dsDNA Quantification Assay Kit | Invitrogen | 1 | (kit) |
-| Clear Qubit Assay tubes | 0.5 mL thin-walled, polypropylene tubes | Invitrogen | 98 | Must be correct tubes to allow for fluorometer to read concentration |
 
 - Description: E.g., "filter".
 - Product Name and Model: Provide the official name of the product.
@@ -235,88 +220,35 @@ For 96-well Plate:
 
 #### Preparation
 
-1. Dilute primers from 100 uM to 10 uM if not already at 10uM.
+1. Dilute primers from 100 uM to 1 uM.
 2. Set up PCR under hood by wiping off all surfaces, pipettes, and racks with RNase AWAY and UV sterilizing for 5-10 mins.
 3. Map out order of samples on 96-well PCR plate. Make sure to leave a space for a no template control (NTC) and positive control.
 
 #### PCR
 
-1. Make PCR master mix and add 24 ul to each well of PCR plate - possible use on Opentrons OT2 Pipetting Robot.
+1. Add the following volumes to each well of a 96-well plate:
 
-- 12.5 ul [AmpliTaq Gold 360 Master Mix](commercial_mm)
-- 9.5 ul molecular water 
-- 1 ul Fwd primer (10 μM) - [GTACACACCGCCCGTC](pcr_primer_name_forward)
-- 1 ul Rev primer (10 μM) - [TGATCCTTCTGCAGGTTCACCTAC](pcr_primer_name_reverse)
+- 6.25 uL Kapa HiFi Hotstart ReadyMix
+- 2.5 ul Fwd primer (10 μM) - [GTACACACCGCCCGTC](pcr_primer_name_forward)
+- 2.5 ul Rev primer (10 μM) - [TGATCCTTCTGCAGGTTCACCTAC](pcr_primer_name_reverse)
 
 | PCR Primer Name | Direction | Sequence (5’ -> 3’) | Sequence (5’ -> 3’) with Fluidigm Adapters | Fluidigm Adapter |
 | ----- | ----- | ----- | ----- | ----- |
 | [1391F](pcr_primer_name_forward) | forward | [GTACACACCGCCCGTC](pcr_primer_name_forward) | ACACTGACGACATGGTTCTACA xxx [GTACACACCGCCCGTC](pcr_primer_name_forward) | CS1-TS-F |
 | [EukBr](pcr_primer_name_reverse) | reverse | [TGATCCTTCTGCAGGTTCACCTAC](pcr_primer_name_reverse) | TACGGTAGCAGAGACTTGGTCT xxx [TGATCCTTCTGCAGGTTCACCTAC](pcr_primer_name_reverse) | CS2-TS-R |
 
-2. Add [1.0](pcr_dna_vol) ul of sample DNA (or molecular water for NTC) to respective wells for a total reaction volume of [25](amplificationReactionVolume) ul per well. Pipette up and down or vortex to fully distribute DNA into master mix.
+2. Add [2.0](pcr_dna_vol) ul of sample DNA (or molecular water for NTC) to respective wells for a total reaction volume of [13.25](amplificationReactionVolume) ul per well. Pipette up and down or vortex to fully distribute DNA into master mix.
 3. Seal plate with PCR plate seal or strip caps.
 4. Load plate onto thermal cycler and select program to run the following steps:
 
 | PCR step | Temperature | Duration | Repetition |
 | ----- | ----- | ----- | ----- |
 | Initial Denaturation | 95°C | 180s | 1x |
-| Denaturation | 95°C | 45s | 35x |
-| Annealing | 57°C | 60s | 35x |
-| Extension | 72°C | 90s | 35x |
-| Final Extension | 72°C | 10min | 1x |
-| Hold | 4°C | ∞ | |
-
-#### Quality Control and PCR Clean-Up
-
-2% Agarose Gel
-Following PCR amplification, run products through 2% agarose gel to confirm presence of target bands:
-1. Make stock solution of TBE buffer (1x) in a 1-L glass container by adding 100 ml of stock TBE buffer (10x) to 900 ml DI water.
-2. For a 5.5in x 5.5in gel tray, mix 200 ml of TBE buffer (1x) and 4 g of agarose in a flask. Use scale to weigh agarose.
-3. Microwave mixture for 1 minute, followed by 15-30 second intervals. Watch carefully after 1 minute - mixture can bubble out of flask! The agarose should be fully dissolved so that the solution is mostly clear. Wear a protective glove when handling flask as the mixture will be hot.
-4. Allow for gel mixture to cool in flask for 5-10 min. While cooling, set up gel tray (5.5in x 5.5in) in gel box. Make sure the tray is oriented properly and sealed tight for gel pouring. Add two gel combs for 20 wells each lane - total of 40 wells.
-5. Once cooled to 50°C, add 20 ul of SYBR safe to the mixture and swirl the flask gently to mix (don't create bubbles!). SYBR safe is light sensitive so after adding to mixture, immediately close the vial and store in the dark.
-6. Pour the gel mixture and remove any bubbles using a pipette tip.
-7. Allow gel to set for 30-45 min.
-8. Cut large strips of parafilm or use 8-strip tubes and label each sample as a position on the parafilm/tubes.
-9. Pipette 1 ul of blue loading dye onto each sample position or into each tube.
-10. Pipette 5 ul of DNA sample into loading dye and pipette to mix 2-3 times.
-11. Once the gel is set, fill the gel box with enough TBE buffer (1x) to fully submerge the gel beneath ~1cm of buffer.
-12. Carefully add samples (6 ul each) to gel and write down their positions.
-13. Add 6 ul of ladder dye (green) to gel.
-14. Run gel at 100 V for 40-50 min then visualize on gel reader machine.
-
-(OPTIONAL) Purify PCR products using AMPure beads protocol (optimized for Opentrons)
-1. Follow along with AMPure XP beads manufacturer protocol (begins on page 5 of manual - <https://www.beckmancoulter.com/wsrportal/techdocs?docname=B37419>).
-2. Will need magnetic plate and fresh 70% ethanol.
-3. End product will be ~40 ul of cleaned DNA eluted in molecular grade water.
-
-(OPTIONAL) Run Qubit on final PCR Products
-1. Follow manufacturer protocol for running Qubit: <https://tools.thermofisher.com/content/sfs/manuals/Qubit_dsDNA_HS_Assay_UG.pdf>.
-
-(OPTIONAL) Run Second 2% Agarose Gel on Purified PCR Products
-1. Follow along with previous gel instructions.
-
-#### Sequencing Preparation
-1. After performing a gel on the PCR products, pipette 10 uL of each sample into their respective wells of a new 96-well PCR plate.
-    - Leave well H12 empty for Michigan State's sequencing negative control
-3. Seal plate, label with ID and place in freezer till day of shipping.
-4. Fill out Illumina Sample Submission form with sample information and 96-well plate format.
-    - Can be found online at: [LIMS Project Submission](https://rtsf.natsci.msu.edu/genomics/lims-project-submission.aspx)
-5. Login to [LabLink](https://msu.claritylims.com/lablink/login) and create a project for the sequencing run.
-6. Upload project and run information, sample submission form and gel images (annotated) to the project.
-7. Prepare plates for shipping by obtaining dry ice (5-10lbs depending on quantity of plates), a styrofoam cooler and fitted cardboard box.
-8. Place 1-2 inches of dry ice on bottom of styrofoam cooler followed by sequencing plates then the remainder of dry ice.
-9. Place lid on cooler (do not tape shut) and place cooler into cardboard box.
-10. Tape the cardboard box shut and attach a shipping label.
-
-#### Sequencing Facility Protocol
-Information on sequencing is provided by Michigan State University's Genomics Core Facility:
-
-The Genomics Core performs a secondary PCR using dual-indexed, Illumina compatible primers which target the Fluidigm CS1/CS2 oligomers at the ends of the primary PCR products. Amplicons are batch normalized using the Charm Biotech PCR Normalization and Purification kit and the recovered product is pooled. The pool is QC'd and quantified using a combination of Biotium AccuGreen High Sensitivity dsDNA, Agilent 4200 TapeStation HS DNA1000 and Invitrogen Collibri Library Quantification qPCR assays.
-
-Each pool is loaded onto one (1) Illumina MiSeq v2 Standard flow cell. Sequencing is carried out in a 2x150bp paired end format using a MiSeq v2 300 cycle reagent cartridge. Custom sequencing and index primers complementary to the Fluidigm CS1 and CS2 oligomers are added to appropriate wells of the reagent cartridge. Base calling is done by Illumina Real Time Analysis (RTA) v1.18.54 and output of RTA is demultiplexed and converted to FastQ format with Illumina Bcl2fastq v2.20.0. A summary of the run output is provided by MSU and basic QC information about sequence data is provided by the accompanying FastQC reports. For information regarding interpretation of these reports, please see the FastQC Tutorial and FAQ from [MSU's website](https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx).
-
-Data is downloaded using an account on the Genomics FTP server. See the [Genomics FAQ](https://rtsf.natsci.msu.edu/genomics/data-retrieval.aspx) for general instructions. Sequence data typically remains available on the FTP server for 60 days. It is the responsibility of the researcher to download and store data long term. The RTSF Genomics Core only guarantees retention of sequence data for one year from the date of availability.
+| Denaturation | 95°C | 30s | 29x |
+| Annealing | 63°C | 30s | 29x |
+| Extension | 72°C | 30s | 29x |
+| Final Extension | 72°C | 5min | 1x |
+| Hold | 12°C | ∞ | |
 
 ### Basic troubleshooting guide
 
@@ -326,11 +258,7 @@ Low Volume Post-PCR
 
 Contamination
 
-- If there are contamination bands appearing on the gel, run another PCR ensuring full sterilization of work spaces and equipment under the hood and use new vials of [AmpliTaq Gold 360 Master Mix](commercial_mm) and molecular water. If diluted primers are contaminated, use freshly-made aliquot of primers. 
-
-Weak Amplification
-
-- If you are seeing weak amplification bands on the gel, ensure the master mix and DNA is being fully mixed. You can also increase the concentration of primers or tweak the PCR process on the thermal cycler (increasing # of cycles of PCR or optimize annealing temperature). The addition of Bovine Serum Albumin (BSA) to master mix is also useful in some cases. 
+- If there are contamination bands appearing on the gel, run another PCR ensuring full sterilization of work spaces and equipment under the hood and use new vials of Kapa HiFi Hotstart ReadyMix and molecular water. If diluted primers are contaminated, use freshly-made aliquot of primers. 
 
 ## REFERENCES
 Not applicable.
