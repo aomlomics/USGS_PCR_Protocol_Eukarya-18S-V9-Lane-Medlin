@@ -55,13 +55,13 @@ pcr_rep: 1
 nucl_acid_amp: not provided
 pcr_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:63_0.5;elongation:72_0.5;final elongation:72_5;29
 annealingTemp: 63
-pcr_cycles: 29
+pcr_cycles: 30
 pcr_analysis_software: not provided
 pcr_method_additional: not provided
 barcoding_pcr_appr: two-step PCR
 pcr2_thermocycler: not provided
 pcr2_amplificationReactionVolume: 50
-pcr2_commercial_mm: 2x KAPA HiFi HotStrt Ready Mix
+pcr2_commercial_mm: 2x KAPA HiFi HotStart Ready Mix
 pcr2_custom_mm: not applicable
 pcr2_dna_vol: 20
 pcr2_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:55_0.5;elongation:72_0.5;final elongation:72_5;8
@@ -152,7 +152,7 @@ seq_method_additional: not applicable
 
 ### Summary
 
-This protocol describes steps for performing PCR for [18S rRNA](target_gene) [V9](target_subfragment) marker gene regions using eDNA extracted from Sterivex by USGS. The PCR protocol only includes a primary PCR step.
+This protocol describes steps for performing PCR for [18S rRNA](target_gene) [V9](target_subfragment) marker gene regions using eDNA extracted from Sterivex by USGS. The PCR protocol includes a primary PCR step and a secondary PCR step.
 
 ### Method description and rationale
 
@@ -237,16 +237,41 @@ For 96-well Plate:
 | [1391F](pcr_primer_name_forward) | forward | [GTACACACCGCCCGTC](pcr_primer_name_forward) | ACACTGACGACATGGTTCTACA xxx [GTACACACCGCCCGTC](pcr_primer_name_forward) | CS1-TS-F |
 | [EukBr](pcr_primer_name_reverse) | reverse | [TGATCCTTCTGCAGGTTCACCTAC](pcr_primer_name_reverse) | TACGGTAGCAGAGACTTGGTCT xxx [TGATCCTTCTGCAGGTTCACCTAC](pcr_primer_name_reverse) | CS2-TS-R |
 
-2. Add [2.0](pcr_dna_vol) ul of sample DNA (or molecular water for NTC) to respective wells for a total reaction volume of [13.25](amplificationReactionVolume) ul per well. Pipette up and down or vortex to fully distribute DNA into master mix.
+2. Add [2.0](pcr_dna_vol) ul of sample DNA (or molecular water for NTC) to respective wells for a total reaction volume of [13.25](amplificationReactionVolume) ul per well. Pipette up and down to fully distribute DNA into master mix.
 3. Seal plate with PCR plate seal or strip caps.
 4. Load plate onto thermal cycler and select program to run the following steps:
 
 | PCR step | Temperature | Duration | Repetition |
 | ----- | ----- | ----- | ----- |
 | Initial Denaturation | 95°C | 180s | 1x |
-| Denaturation | 95°C | 30s | 29x |
-| Annealing | 63°C | 30s | 29x |
-| Extension | 72°C | 30s | 29x |
+| Denaturation | 95°C | 30s | 30x |
+| Annealing | 63°C | 30s | 30x |
+| Extension | 72°C | 30s | 30x |
+| Final Extension | 72°C | 5min | 1x |
+| Hold | 12°C | ∞ | |
+
+#### PCR 2
+
+1. Add the following volumes to each well of a 96-well plate:
+
+- 25 uL 2X Kapa HiFi Hotstart ReadyMix
+- 5uL Index Primer Mix
+
+| PCR Primer Name | Direction | Sequence (5’ -> 3’) | Sequence (5’ -> 3’) with Fluidigm Adapters | Fluidigm Adapter |
+| ----- | ----- | ----- | ----- | ----- |
+| Index Primer Mix | forward |  |  |  |
+|  |  |  |  |  |
+
+2. Add 20 uL of amplified DNA sample to respective wells for a total reaction volume of 50 uL per well. Pipette up and down to fully distribute DNA into master mix.
+3. Seal plate with PCR plate seal or strip caps.
+4. Load plate onto thermal cycler and select program to run the following steps:
+
+| PCR step | Temperature | Duration | Repetition |
+| ----- | ----- | ----- | ----- |
+| Initial Denaturation | 95°C | 180s | 1x |
+| Denaturation | 95°C | 30s | 8x |
+| Annealing | 55°C | 30s | 8x |
+| Extension | 72°C | 30s | 8x |
 | Final Extension | 72°C | 5min | 1x |
 | Hold | 12°C | ∞ | |
 
