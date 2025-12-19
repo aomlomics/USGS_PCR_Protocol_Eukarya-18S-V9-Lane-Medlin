@@ -53,7 +53,7 @@ custom_mm: PCR reactions were run in 13.25 uL reaction volumes, with 2.0 uL of D
 pcr_dna_vol: 2.0
 pcr_rep: 1
 nucl_acid_amp: not provided
-pcr_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:63_0.5;elongation:72_0.5;final elongation:72_5;29
+pcr_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:63_0.5;elongation:72_0.5;final elongation:72_5;30
 annealingTemp: 63
 pcr_cycles: 30
 pcr_analysis_software: not provided
@@ -69,10 +69,10 @@ pcr2_annealingTemp: 55
 pcr2_cycles: 8
 pcr2_analysis_software: not applicable
 pcr2_method_additional: not applicable
-sequencing_location: USGS MDBC
+sequencing_location: University of Oregon's Genomics and Cell Characterization Core Facility (GC3F)
 platform: ILLUMINA
-instrument: Illumina MiSeq [OBI:0002003]
-seq_kit: MiSeq Reagent Kit v2 (300 cycles)
+instrument: Illumina NovaSeq 6000 SP [OBI:0002630]
+seq_kit: missing
 lib_layout: paired
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
@@ -201,8 +201,10 @@ For 96-well Plate:
 | 10 ul Filter tips | TipOne Pipette Tips, 10 uL | TipOne | 2 | (boxes) Can be substituted with generic |
 | Kapa HiFi Hotstart ReadyMix | Kapa HiFi Hotstart ReadyMix  | Roche | 0.6 | (mL) |
 | Molecular water | Invitrogen RT-PCR Grade Water | Fisher Scientific | 1 vial | |
-| Forward Primer - 1391F | 18S 1391F Fluidigm Primer | IDT | 105 | (ul (10uM)) Primer must be diluted from 100uM stocks to 10uM |
-| Reverse Primer - EukBR | 18S EukBR Fluidigm Primer | IDT | 105 | (ul (10uM)) Primer must be diluted from 100uM stocks to 10uM |
+| Forward Primer - 1391F | 18S 1391F Fluidigm Primer | IDT | 105 | (ul (1uM)) Primer must be diluted from 100uM stocks to 1uM |
+| Reverse Primer - EukBR | 18S EukBR Fluidigm Primer | IDT | 105 | (ul (1uM)) Primer must be diluted from 100uM stocks to 1uM |
+| 2X Kapa HiFi Hotstart ReadyMix | 2X Kapa HiFi Hotstart ReadyMix | Roche | 2.4 | (mL) |
+| Index Primer Mix | Illumina Compatible Index Mix (not specified) | missing | 0.48 | (mL) |
 | **Chemicals** |
 | RNase AWAY | RNase AWAY Surface Decontaminant | ThermoFisher Scientific | 1 | (bottle) Used to sterilize lab surfaces and equipment |
 | EtOH | Ethanol | Generic Brand | 1 | (wash bottle) Must be molecular grade ethanol |
@@ -229,15 +231,15 @@ For 96-well Plate:
 1. Add the following volumes to each well of a 96-well plate:
 
 - 6.25 uL Kapa HiFi Hotstart ReadyMix
-- 2.5 ul Fwd primer (10 μM) - [GTACACACCGCCCGTC](pcr_primer_name_forward)
-- 2.5 ul Rev primer (10 μM) - [TGATCCTTCTGCAGGTTCACCTAC](pcr_primer_name_reverse)
+- 2.5 ul Fwd primer (1 μM) - GTACACACCGCCCGTC
+- 2.5 ul Rev primer (1 μM) - TGATCCTTCTGCAGGTTCACCTAC
 
-| PCR Primer Name | Direction | Sequence (5’ -> 3’) | Sequence (5’ -> 3’) with Fluidigm Adapters | Fluidigm Adapter |
+| PCR Primer Name | Direction | Sequence (5’ -> 3’) |
 | ----- | ----- | ----- | ----- | ----- |
-| [1391F](pcr_primer_name_forward) | forward | [GTACACACCGCCCGTC](pcr_primer_name_forward) | ACACTGACGACATGGTTCTACA xxx [GTACACACCGCCCGTC](pcr_primer_name_forward) | CS1-TS-F |
-| [EukBr](pcr_primer_name_reverse) | reverse | [TGATCCTTCTGCAGGTTCACCTAC](pcr_primer_name_reverse) | TACGGTAGCAGAGACTTGGTCT xxx [TGATCCTTCTGCAGGTTCACCTAC](pcr_primer_name_reverse) | CS2-TS-R |
+| 1391F | forward | GTACACACCGCCCGTC |
+| EukBr | reverse | TGATCCTTCTGCAGGTTCACCTAC |
 
-2. Add [2.0](pcr_dna_vol) ul of sample DNA (or molecular water for NTC) to respective wells for a total reaction volume of [13.25](amplificationReactionVolume) ul per well. Pipette up and down to fully distribute DNA into master mix.
+2. Add 2.0 ul of sample DNA (or molecular water for NTC) to respective wells for a total reaction volume of 13.25 ul per well. Pipette up and down to fully distribute DNA into master mix.
 3. Seal plate with PCR plate seal or strip caps.
 4. Load plate onto thermal cycler and select program to run the following steps:
 
@@ -256,11 +258,6 @@ For 96-well Plate:
 
 - 25 uL 2X Kapa HiFi Hotstart ReadyMix
 - 5uL Index Primer Mix
-
-| PCR Primer Name | Direction | Sequence (5’ -> 3’) | Sequence (5’ -> 3’) with Fluidigm Adapters | Fluidigm Adapter |
-| ----- | ----- | ----- | ----- | ----- |
-| Index Primer Mix | forward |  |  |  |
-|  |  |  |  |  |
 
 2. Add 20 uL of amplified DNA sample to respective wells for a total reaction volume of 50 uL per well. Pipette up and down to fully distribute DNA into master mix.
 3. Seal plate with PCR plate seal or strip caps.
