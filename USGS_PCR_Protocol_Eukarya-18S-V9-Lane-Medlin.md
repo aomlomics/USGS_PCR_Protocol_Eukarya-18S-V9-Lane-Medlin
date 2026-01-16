@@ -283,7 +283,9 @@ Contamination
 - If there are contamination bands appearing on the gel, run another PCR ensuring full sterilization of work spaces and equipment under the hood and use new vials of Kapa HiFi Hotstart ReadyMix and molecular water. If diluted primers are contaminated, use freshly-made aliquot of primers. 
 
 ## REFERENCES
+
 Not applicable.
 
 ## APPENDIX A: DATASHEETS
+
 Not applicable.
