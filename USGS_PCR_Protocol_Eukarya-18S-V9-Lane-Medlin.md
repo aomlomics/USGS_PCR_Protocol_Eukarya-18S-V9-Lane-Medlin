@@ -26,7 +26,7 @@ maturity level: mature
 pcr_0_1: 1
 thermocycler: Eppendorf Mastercycler Nexus Thermal Cycler
 amplificationReactionVolume: 13.25
-assay_name: ssu18sv9
+assay_name: Eukarya-18S-V9-Lane-Medlin
 assay_validation: not provided
 targetTaxonomicAssay: 18S rRNA gene sequencing targeting the V9 region using primers 1391F and EukBr
 targetTaxonomicScope: Eukaryotes, with a focus on microbial eukaryotic lineages
@@ -127,6 +127,7 @@ seq_method_additional: not applicable
 | 1.0.0 | 2025-12-15 | Initial release |
 | 1.0.1 | 2025-12-15 | Updated YAML front matter - note that details in main text still reflect AOML parameters and have not been updated |
 | 1.0.2 | 2025-12-17 | Updated entire protocol to reflect USGS parameters |
+| 1.0.3 | 2026-01-23 | Updated assay name |
 
 ### Acronyms and Abbreviations
 
