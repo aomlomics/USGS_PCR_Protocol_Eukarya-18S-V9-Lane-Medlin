@@ -62,28 +62,16 @@ barcoding_pcr_appr: two-step PCR
 pcr2_thermocycler: not provided
 pcr2_amplificationReactionVolume: 50
 pcr2_commercial_mm: 2x KAPA HiFi HotStart Ready Mix
-pcr2_custom_mm: not applicable
+pcr2_custom_mm: PCR reactions were run in 50 uL reaction volumes, with 20 uL of DNA PCR product, 25 uL of 2X Kapa HiFi HotStart ReadyMix, and 5 uL of Illumina index set.
 pcr2_dna_vol: 20
 pcr2_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:55_0.5;elongation:72_0.5;final elongation:72_5;8
 pcr2_annealingTemp: 55
 pcr2_cycles: 8
 pcr2_analysis_software: not applicable
 pcr2_method_additional: not applicable
-sequencing_location: University of Oregon's Genomics and Cell Characterization Core Facility (GC3F)
-platform: ILLUMINA
-instrument: Illumina NovaSeq 6000 SP [OBI:0002630]
-seq_kit: missing
-lib_layout: paired
-adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
-adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
-lib_screen: not provided
-lib_conc_meth: not provided
-seq_method_additional: not applicable
 ---
 
 # USGS/MDBC PCR Protocol 18S rRNA V9 (Lane-Medlin)
-
-***WARNING: DETAILS BELOW HAVE NOT BEEN UPDATED. PLEASE USE ABOVE VALUES IN YAML FRONT MATTER.***
 
 ## PROTOCOL INFORMATION
 
@@ -108,17 +96,25 @@ seq_method_additional: not applicable
 | Luke Thompson | NOAA/AOML, MSU/NGI | <https://orcid.org/0000-0002-3911-1280> | 2025-12-15 |
 | Sammy Harding | NOAA/AOML, MSU/NGI | <https://orcid.org/0009-0008-8885-6140> | 2025-12-17 |
 
-## RELATED PROTOCOLS
+### Related Protocols
 
-| PROTOCOL NAME | LINK  | VERSION | RELEASE DATE|
-| ------------- | ------------- | ------------- | ------------- |
-| Not provided |  |  |  |
+- This section contains protocols that should be known to users of this protocol.
+- Internal Protocols: Derivative or altered protocols, or other protocols in this workflow.
+- External Protocols: Protcols from manufacturers or other groups. 
+- Include the link to each protocol.
+- Include the version number (internal) or access date (external) of the protocol when it was accessed.
 
-## RELATED EXTERNAL PROTOCOLS
+#### Internal Protocols
+
+| PROTOCOL NAME | LINK         | VERSION      | RELEASE DATE | INTERNAL/EXTERNAL |
+| ------------- | ------------ | ------------ | ------------ | ----------------- |
+| AOML 'Omics Protocols | https://github.com/aomlomics/protocols | not applicable | ongoing |
+
+#### External Protocols
 
 | PROTOCOL NAME | LINK | ISSUER / AUTHOR | ACCESS DATE |
 | ------------ | ------------ | ------------ | ---------- |
-| Not provided |  |  |  |
+| Not applicable |
 
 ### Protocol Revision Record
 
@@ -205,7 +201,7 @@ For 96-well Plate:
 | Forward Primer - 1391F | 18S 1391F Fluidigm Primer | IDT | 105 | (ul (1uM)) Primer must be diluted from 100uM stocks to 1uM |
 | Reverse Primer - EukBR | 18S EukBR Fluidigm Primer | IDT | 105 | (ul (1uM)) Primer must be diluted from 100uM stocks to 1uM |
 | 2X Kapa HiFi Hotstart ReadyMix | 2X Kapa HiFi Hotstart ReadyMix | Roche | 2.4 | (mL) |
-| Index Primer Mix | Illumina Compatible Index Mix (not specified) | missing | 0.48 | (mL) |
+| Index Primer Mix | Illumina Compatible Index Mix | Illumina | 0.48 | (mL) |
 | **Chemicals** |
 | RNase AWAY | RNase AWAY Surface Decontaminant | ThermoFisher Scientific | 1 | (bottle) Used to sterilize lab surfaces and equipment |
 | EtOH | Ethanol | Generic Brand | 1 | (wash bottle) Must be molecular grade ethanol |
@@ -235,10 +231,10 @@ For 96-well Plate:
 - 2.5 ul Fwd primer (1 μM) - GTACACACCGCCCGTC
 - 2.5 ul Rev primer (1 μM) - TGATCCTTCTGCAGGTTCACCTAC
 
-| PCR Primer Name | Direction | Sequence (5’ -> 3’) |
+| PCR Primer Name | Direction | Sequence (5’ -> 3’) | Sequence (5’ -> 3’) with Illumina tail | 
 | ----- | ----- | ----- | ----- | ----- |
-| 1391F | forward | GTACACACCGCCCGTC |
-| EukBr | reverse | TGATCCTTCTGCAGGTTCACCTAC |
+| 1391F | forward | GTACACACCGCCCGTC | TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG xxx GTACACACCGCCCGTC | 
+| EukBr | reverse | TGATCCTTCTGCAGGTTCACCTAC | GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG xxx TGATCCTTCTGCAGGTTCACCTAC |
 
 2. Add 2.0 ul of sample DNA (or molecular water for NTC) to respective wells for a total reaction volume of 13.25 ul per well. Pipette up and down to fully distribute DNA into master mix.
 3. Seal plate with PCR plate seal or strip caps.
@@ -254,6 +250,8 @@ For 96-well Plate:
 | Hold | 12°C | ∞ | |
 
 #### PCR 2
+
+Note: Be sure to record which indices are used!
 
 1. Add the following volumes to each well of a 96-well plate:
 
