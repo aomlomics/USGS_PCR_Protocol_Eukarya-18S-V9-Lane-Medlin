@@ -232,7 +232,7 @@ For 96-well Plate:
 - 2.5 ul Rev primer (1 μM) - TGATCCTTCTGCAGGTTCACCTAC
 
 | PCR Primer Name | Direction | Sequence (5’ -> 3’) | Sequence (5’ -> 3’) with Illumina tail | 
-| ----- | ----- | ----- | ----- | ----- |
+| ----- | ----- | ----- | ----- |
 | 1391F | forward | GTACACACCGCCCGTC | TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG xxx GTACACACCGCCCGTC | 
 | EukBr | reverse | TGATCCTTCTGCAGGTTCACCTAC | GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG xxx TGATCCTTCTGCAGGTTCACCTAC |
 
