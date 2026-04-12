@@ -54,7 +54,7 @@ probe_conc: not applicable
 commercial_mm: Kapa HiFi HotStart ReadyMix (Roche)
 custom_mm: not applicable
 pcr_rep: 1
-nucl_acid_amp: # use Zenodo DOI for this protocol
+nucl_acid_amp: # use Zenodo DOI for this repository
 pcr_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:63_0.5;elongation:72_0.5;final elongation:72_5;30
 annealingTemp: 63
 pcr_cycles: 30
