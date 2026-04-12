@@ -1,4 +1,5 @@
 ---
+
 # MIOP terms
 methodology_category: omics analysis
 project: "US Geological Survey Mesophotic and Deep Benthic Communities (MDBC) Protocols"
@@ -18,7 +19,7 @@ language: en
 issued: 2024-08-22
 audience: scientists
 publisher: NOAA Atlantic Oceanographic and Meteorological Laboratory
-hasVersion: 1.0.4
+hasVersion: 1.0.5
 license: CC0 1.0 Universal
 maturity level: mature
 
@@ -71,6 +72,7 @@ pcr2_annealingTemp: 55
 pcr2_cycles: 8
 pcr2_analysis_software: not provided
 pcr2_method_additional: PCR reactions were run in 50 uL reaction volumes, with 20 uL of DNA PCR product, 25 uL of 2X Kapa HiFi HotStart ReadyMix, and 5 uL of Illumina index set.
+
 ---
 
 # USGS/MDBC PCR Protocol 18S rRNA V9 (Lane-Medlin)
@@ -116,7 +118,7 @@ pcr2_method_additional: PCR reactions were run in 50 uL reaction volumes, with 2
 
 | PROTOCOL NAME | LINK | ISSUER / AUTHOR | ACCESS DATE |
 | ------------ | ------------ | ------------ | ---------- |
-| Not applicable |
+| Not applicable |            |              |            |
 
 ### Protocol Revision Record
 
@@ -126,7 +128,8 @@ pcr2_method_additional: PCR reactions were run in 50 uL reaction volumes, with 2
 | 1.0.1 | 2025-12-15 | Updated YAML front matter - note that details in main text still reflect AOML parameters and have not been updated |
 | 1.0.2 | 2025-12-17 | Updated entire protocol to reflect USGS parameters |
 | 1.0.3 | 2026-01-23 | Updated assay name |
-| 1.0.4 | 2026-01-23 | Updated primer references and other YAML front matter |
+| 1.0.4 | 2026-04-11 | Updated primer references and other YAML front matter |
+| 1.0.5 | 2026-04-11 | Formatting updates |
 
 ### Acronyms and Abbreviations
 
