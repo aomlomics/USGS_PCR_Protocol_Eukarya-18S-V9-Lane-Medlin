@@ -25,50 +25,50 @@ maturity level: mature
 # FAIRe terms
 pcr_0_1: 1
 thermocycler: Eppendorf Mastercycler Nexus Thermal Cycler
-amplificationReactionVolume: 13.25
 assay_name: Eukarya-18S-V9-Lane-Medlin
 assay_validation: not provided
-targetTaxonomicAssay: 18S rRNA gene sequencing targeting the V9 region using primers 1391F and EukBr
-targetTaxonomicScope: Eukaryotes, with a focus on microbial eukaryotic lineages
-target_gene: 18S rRNA
+targetTaxonomicAssay: Eukarya
+targetTaxonomicScope: phytoplankton, zooplankton
+target_gene: 18S rRNA (SSU eukaryote)
 target_subfragment: V9
 ampliconSize: 127
 pcr_primer_forward: GTACACACCGCCCGTC
 pcr_primer_reverse: TGATCCTTCTGCAGGTTCACCTAC
 pcr_primer_name_forward: 1391F
 pcr_primer_name_reverse: EukBr
-pcr_primer_reference_forward: 10.1371/journal.pone.0006372
-pcr_primer_reference_reverse: 10.1371/journal.pone.0006372
+pcr_primer_reference_forward: https://cir.nii.ac.jp/crid/1570009750603612672 | https://doi.org/10.1111/j.1365-294X.2009.04480.x
+pcr_primer_reference_reverse: https://doi.org/10.1016/0378-1119(88)90066-2 | https://doi.org/10.1111/j.1365-294X.2009.04480.x
 pcr_primer_vol_forward: 2.5
 pcr_primer_vol_reverse: 2.5
 pcr_primer_conc_forward: 1.0
 pcr_primer_conc_reverse: 1.0
+pcr_dna_vol: 2.0
+amplificationReactionVolume: 13.25
 probeReporter: not applicable
 probeQuencher: not applicable
 probe_seq: not applicable
 probe_ref: not applicable
 probe_conc: not applicable
-commercial_mm: Kapa HiFi HotStart ReadyMix
-custom_mm: PCR reactions were run in 13.25 uL reaction volumes, with 2.0 uL of DNA, 6.25 uL of Kapa HiFi HotStart ReadyMix, and 2.5 uL of each primer (1 uM).
-pcr_dna_vol: 2.0
+commercial_mm: Kapa HiFi HotStart ReadyMix (Roche)
+custom_mm: not applicable
 pcr_rep: 1
-nucl_acid_amp: not provided
+nucl_acid_amp: # use Zenodo DOI for this protocol
 pcr_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:63_0.5;elongation:72_0.5;final elongation:72_5;30
 annealingTemp: 63
 pcr_cycles: 30
 pcr_analysis_software: not provided
-pcr_method_additional: not provided
+pcr_method_additional: PCR reactions were run in 13.25 uL reaction volumes, with 2.0 uL of DNA, 6.25 uL of Kapa HiFi HotStart ReadyMix, and 2.5 uL of each primer (1 uM).
 barcoding_pcr_appr: two-step PCR
 pcr2_thermocycler: not provided
-pcr2_amplificationReactionVolume: 50
-pcr2_commercial_mm: 2x KAPA HiFi HotStart Ready Mix
-pcr2_custom_mm: PCR reactions were run in 50 uL reaction volumes, with 20 uL of DNA PCR product, 25 uL of 2X Kapa HiFi HotStart ReadyMix, and 5 uL of Illumina index set.
 pcr2_dna_vol: 20
+pcr2_amplificationReactionVolume: 50
+pcr2_commercial_mm: 2x KAPA HiFi HotStart Ready Mix (Roche)
+pcr2_custom_mm: not applicable
 pcr2_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:55_0.5;elongation:72_0.5;final elongation:72_5;8
 pcr2_annealingTemp: 55
 pcr2_cycles: 8
 pcr2_analysis_software: not applicable
-pcr2_method_additional: not applicable
+pcr2_method_additional: PCR reactions were run in 50 uL reaction volumes, with 20 uL of DNA PCR product, 25 uL of 2X Kapa HiFi HotStart ReadyMix, and 5 uL of Illumina index set.
 ---
 
 # USGS/MDBC PCR Protocol 18S rRNA V9 (Lane-Medlin)
@@ -124,6 +124,7 @@ pcr2_method_additional: not applicable
 | 1.0.1 | 2025-12-15 | Updated YAML front matter - note that details in main text still reflect AOML parameters and have not been updated |
 | 1.0.2 | 2025-12-17 | Updated entire protocol to reflect USGS parameters |
 | 1.0.3 | 2026-01-23 | Updated assay name |
+| 1.0.4 | 2026-01-23 | Updated primer references and other YAML front matter |
 
 ### Acronyms and Abbreviations
 
@@ -283,7 +284,9 @@ Contamination
 
 ## REFERENCES
 
-Not applicable.
+1. Lane, D. (1991). 16S/23S rRNA sequencing. Nucleic Acid Techniques in Bacterial Systematics, 115–175. https://cir.nii.ac.jp/crid/1570009750603612672
+2. Medlin, L., Elwood, H. J., Stickel, S., & Sogin, M. L. (1988). The characterization of enzymatically amplified eukaryotic 16S-like rRNA-coding regions. Gene, 71(2), 491–499. https://doi.org/10.1016/0378-1119(88)90066-2
+3. Stoeck, T., Bass, D., Nebel, M., Christen, R., Jones, M. D. M., Breiner, H.-W., & Richards, T. A. (2010). Multiple marker parallel tag environmental DNA sequencing reveals a highly complex eukaryotic community in marine anoxic water. Molecular Ecology, 19 Suppl 1, 21–31. https://doi.org/10.1111/j.1365-294X.2009.04480.x
 
 ## APPENDIX A: DATASHEETS
 
