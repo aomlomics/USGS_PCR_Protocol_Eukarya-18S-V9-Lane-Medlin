@@ -24,6 +24,8 @@ maturity level: mature
 
 # FAIRe terms
 pcr_0_1: 1
+inhibition_check_0_1: 0
+inhibition_check: not applicable
 thermocycler: Eppendorf Mastercycler Nexus Thermal Cycler
 assay_name: Eukarya-18S-V9-Lane-Medlin
 assay_validation: not provided
