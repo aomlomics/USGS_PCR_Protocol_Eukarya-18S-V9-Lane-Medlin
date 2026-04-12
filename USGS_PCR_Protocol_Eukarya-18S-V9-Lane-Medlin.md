@@ -69,7 +69,7 @@ pcr2_custom_mm: not applicable
 pcr2_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:55_0.5;elongation:72_0.5;final elongation:72_5;8
 pcr2_annealingTemp: 55
 pcr2_cycles: 8
-pcr2_analysis_software: not applicable
+pcr2_analysis_software: not provided
 pcr2_method_additional: PCR reactions were run in 50 uL reaction volumes, with 20 uL of DNA PCR product, 25 uL of 2X Kapa HiFi HotStart ReadyMix, and 5 uL of Illumina index set.
 ---
 
