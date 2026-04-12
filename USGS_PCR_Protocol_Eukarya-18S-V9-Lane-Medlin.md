@@ -51,7 +51,7 @@ probeQuencher: not applicable
 probe_seq: not applicable
 probe_ref: not applicable
 probe_conc: not applicable
-commercial_mm: Kapa HiFi HotStart ReadyMix (Roche)
+commercial_mm: 2X KAPA HiFi HotStart ReadyMix (Roche)
 custom_mm: not applicable
 pcr_rep: 1
 nucl_acid_amp: # use Zenodo DOI for this repository
@@ -64,7 +64,7 @@ barcoding_pcr_appr: two-step PCR
 pcr2_thermocycler: not provided
 pcr2_dna_vol: 20
 pcr2_amplificationReactionVolume: 50
-pcr2_commercial_mm: 2x KAPA HiFi HotStart Ready Mix (Roche)
+pcr2_commercial_mm: 2X KAPA HiFi HotStart ReadyMix (Roche)
 pcr2_custom_mm: not applicable
 pcr2_cond: initial denaturation:95_3;denaturation:95_0.5;annealing:55_0.5;elongation:72_0.5;final elongation:72_5;8
 pcr2_annealingTemp: 55
